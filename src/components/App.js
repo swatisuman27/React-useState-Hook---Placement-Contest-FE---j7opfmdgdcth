@@ -3,7 +3,17 @@ import '../styles/App.css';
 import React, { useState } from 'react';
 
 export default function App() {
- //code here 
+const [text, setText] = useState("");
+const [inputValue, setInputValue] = useState("");
+ 
+const changeInput = (e) => {
+setInputValue(e.target.value);
+}
+
+const buttonClick = () => {
+setText(text+inputValue);
+setInputValue("");
+}
 
  
   return (
